@@ -2,9 +2,10 @@ console.log("Starting Tour Agency Module");
 
 module.exports = {
     description: "Tour Agency Management System",
-    tours: [], 
-    promotions: [], 
+    tours: [], // Array to store tour packages 
+    promotions: [], // Array to store promotions
 
+    // Adds new tour package
     addTourPackage(name, price, destination) {
         this.tours.push({
             name: name,
@@ -16,10 +17,12 @@ module.exports = {
         console.log(`Tour package "${name}" added successfully.`);
     },
 
+    // List tour packages
     listTourPackages() {
         return this.tours;
     },
 
+    // Update tour package
     updateTourPackage(index, updatedDetails) {
         if (this.tours[index]) {
             this.tours[index] = {
@@ -32,6 +35,7 @@ module.exports = {
         }
     },
 
+    // Add promotion
     addPromotion(name, discount) {
         this.promotions.push({
             name: name,
@@ -40,10 +44,12 @@ module.exports = {
         console.log(`Promotion "${name}" with ${discount}% discount added successfully.`);
     },
 
+    // List promotions
     listPromotions() {
         return this.promotions;
     },
 
+    // Book a tour
     bookTour(index, customerName) {
         if (this.tours[index]) {
             this.tours[index].bookings.push(customerName);
@@ -53,6 +59,7 @@ module.exports = {
         }
     },
 
+    // Add customer feedback
     addCustomerFeedback(index, feedback) {
         if (this.tours[index]) {
             this.tours[index].feedback.push(feedback);
@@ -62,6 +69,7 @@ module.exports = {
         }
     },
 
+    // Generate sales report
     generateSalesReport() {
         const report = this.tours.map(tour => ({
             packageName: tour.name,
