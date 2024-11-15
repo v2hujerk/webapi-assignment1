@@ -3,6 +3,9 @@ The Tour Agency Management Module helps tour agencies manage their business easi
 adding and listing promotions, and keeping track of customer bookings. 
 It also collects customer feedback and generates sales reports to show how many bookings each package has received.
 
+I have posted a App.js file as an example on how you can use these functions.
+To run the App.js file, open the integrated terminal of the App.js and run it by typing "node App.js" in the integrated terminal.
+
 Functionality of Each Function:
 - **addTourPackage**: Adds a new tour package with details like name, price, and destination.  
 - **listTourPackages**: Lists all currently available tour packages.  
